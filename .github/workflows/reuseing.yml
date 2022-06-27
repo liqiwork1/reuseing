@@ -20,6 +20,7 @@ jobs:
       - id: step1
         run: |
           echo "This is reuseing."
+          echo '::warning:: This is a warning message, to demonstrate that commands are being processed.'
           stopMarker=$(uuidgen)
           echo "::stop-commands::$stopMarker"
           echo '::warning:: This will NOT be rendered as a warning, because stop-commands has been invoked.'
