@@ -20,4 +20,6 @@ jobs:
       - id: step1
         run: |
           echo "This is reuseing."
-          echo "::error file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+          stopMarker=$(uuidgen)
+          echo "::stop-commands::$stopMarker"
+          echo '::warning:: This will NOT be rendered as a warning, because stop-commands has been invoked.'
