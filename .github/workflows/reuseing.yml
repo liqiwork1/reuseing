@@ -31,3 +31,4 @@ jobs:
           echo '::set-output name=action_echo::enabled'
           echo '::echo::off'
           echo '::set-output name=action_echo::disabled'
+          echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
